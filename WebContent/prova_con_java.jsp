@@ -15,5 +15,9 @@
 <p>Payment: <input type="text" name="InputpaymentType"></input></p>
 <p><input type="submit" value="Cerca"></input></p>
 </form>
+
+<br/>
+<br/>
+<a href="index.html">Home</a>
 </body>
 </html>

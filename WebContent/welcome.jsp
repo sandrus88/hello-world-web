@@ -15,4 +15,9 @@ Hello <%= name %>, <br />
 </h1>
 <% } %>
 </body>
+
+<br/>
+<br/>
+<a href="prova_con_java.jsp">Back</a>
+<a href="index.html">Home</a>
 </html>

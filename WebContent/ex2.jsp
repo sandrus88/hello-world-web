@@ -11,4 +11,8 @@ Scuola
 <input type="checkbox"></input>
 <input type="submit" value="submit"></input>
 </body>
+
+<br/>
+<br/>
+<a href="index.html">Home</a>
 </html>
