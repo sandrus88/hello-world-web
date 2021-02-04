@@ -7,12 +7,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-	Scuola
-	<input type="checkbox"></input>
-	<input type="submit" value="submit"></input>
+	<%
+	String name = request.getParameter("InputName");
+	if (name != null) {
+	%>
+	<h1>
+		Hello
+		<%=name%>, <br /> Welcome to the School!
+	</h1>
+	<%
+	} else {
+	%>
+	<h3>non hai inserito nessun nome</h3>
+	<%
+	}
+	%>
 </body>
 
 <br />
 <br />
+<a href="ex3_form.jsp">Back</a>
 <a href="index.html">Home</a>
 </html>
