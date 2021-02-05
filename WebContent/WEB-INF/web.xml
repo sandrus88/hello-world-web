@@ -18,4 +18,14 @@
 		<servlet-name>Ex4FormServlet</servlet-name>
 		<servlet-class>org.sg.servlet.Ex4FormServlet</servlet-class>
 	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>StudentWithJava</servlet-name>
+		<url-pattern>/studentservlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>StudentWithJava</servlet-name>
+		<servlet-class>org.sg.servlet.StudentWithJava</servlet-class>
+	</servlet>
 </web-app>

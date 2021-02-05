@@ -7,9 +7,9 @@
 <title>Prova con elementi java</title>
 </head>
 <body>
-	<form action="/ex4form" method="post">
+	<form action="ex4_form2.jsp" method="post">
 		<p>
-			Id: <input type="text" name="InputName"></input>
+			Id: <input type="text" name="InputId"></input>
 		<p>
 		<p>
 			Name: <input type="text" name="InputName"></input>
