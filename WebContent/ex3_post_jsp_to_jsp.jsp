@@ -7,7 +7,7 @@
 <title>Prova con elementi java</title>
 </head>
 <body>
-	<form action="ex4_form2.jsp" method="post">
+	<form action="ex3_post_jsp_to_jsp2.jsp" method="post">
 		<p>
 			Id: <input type="text" name="InputId"></input>
 		<p>
@@ -29,6 +29,7 @@
 
 	<br />
 	<br />
+	<a href="index.html">Back</a>
 	<a href="index.html">Home</a>
 </body>
 </html>

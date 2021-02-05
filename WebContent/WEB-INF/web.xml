@@ -4,26 +4,42 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
 	<display-name>hello-world-web</display-name>
-	
+
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
-	
+
 	<servlet-mapping>
-		<servlet-name>Ex4FormServlet</servlet-name>
-		<url-pattern>/firstservlet</url-pattern>
+		<servlet-name>Ex4GetAndPostServlet</servlet-name>
+		<url-pattern>/ex4GetAndPostServlet</url-pattern>
 	</servlet-mapping>
-	
 	<servlet>
-		<servlet-name>Ex4FormServlet</servlet-name>
-		<servlet-class>org.sg.servlet.Ex4FormServlet</servlet-class>
+		<servlet-name>Ex4GetAndPostServlet</servlet-name>
+		<servlet-class>org.sg.servlet.Ex4GetAndPostServlet</servlet-class>
 	</servlet>
 	
+	<servlet-mapping>
+		<servlet-name>Ex4ServletGet</servlet-name>
+		<url-pattern>/ex4ServletGet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Ex4ServletGet</servlet-name>
+		<servlet-class>org.sg.servlet.Ex4ServletGet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Ex4ServletPost</servlet-name>
+		<url-pattern>/ex4ServletPost</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Ex4ServletPost</servlet-name>
+		<servlet-class>org.sg.servlet.Ex4ServletPost</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>StudentWithJava</servlet-name>
 		<url-pattern>/studentservlet</url-pattern>
 	</servlet-mapping>
-	
 	<servlet>
 		<servlet-name>StudentWithJava</servlet-name>
 		<servlet-class>org.sg.servlet.StudentWithJava</servlet-class>

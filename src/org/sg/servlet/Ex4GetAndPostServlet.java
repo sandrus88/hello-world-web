@@ -7,22 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class Ex4FormServlet extends HttpServlet {
-	
+public class Ex4GetAndPostServlet extends HttpServlet {
+
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {
-//set the MIME type of the response, "text/html"
+
 		response.setContentType("text/html");
-//use a PrintWriter to send text data to the client who has requested the
-//servlet
+
 		java.io.PrintWriter out = response.getWriter();
-//Begin assembling the HTML content
+
 		out.println("<html><head>");
 		out.println("<title>Help Page</title></head><body>");
 		out.println("<h2>Please submit your information</h2>");
-//make sure method="post" so that the servlet service method
-//calls doPost in the response to this form submit
-		out.println("<form method=\"post\" action =\"" + request.getContextPath() + "/firstservlet\" >");
+		out.println("<form method=\"post\" action =\"" + request.getContextPath() + "/ex4GetAndPostServlet\" >");
 		out.println("<table border=\"0\"><tr><td valign=\"top\">");
 		out.println("Your first name: </td> <td valign=\"top\">");
 		out.println("<input type=\"text\" name=\"firstname\" size=\"20\">");
@@ -35,29 +32,31 @@ public class Ex4FormServlet extends HttpServlet {
 		out.println("</td></tr><tr><td valign=\"top\">");
 		out.println("<input type=\"submit\" value=\"Submit Info\"></td></tr>");
 		out.println("</table></form>");
+		out.println("get gestita, questa e' la risposta GET dal server");
 		out.println("<br/><br/>");
+		out.println("<a href=\"index.html\">Back</a>");
 		out.println("<a href=\"index.html\">Home</a>");
 		out.println("</body></html>");
-	}// doGet
+	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {
-//display the parameter names and values
+
 		Enumeration paramNames = request.getParameterNames();
-		String parName;// this will hold the name of the parameter
+		String parName;
 		boolean emptyEnum = false;
-		if (!paramNames.hasMoreElements())
+		if (!paramNames.hasMoreElements()) {
 			emptyEnum = true;
-//set the MIME type of the response, "text/html"
+		}
 		response.setContentType("text/html");
-//use a PrintWriter to send text data to the client
+
 		java.io.PrintWriter out = response.getWriter();
-//Begin assembling the HTML content
+
 		out.println("<html><head>");
 		out.println("<title>Submitted Parameters</title></head><body>");
 		if (emptyEnum) {
 			out.println("<h2>Sorry, the request does not contain any parameters</h2>");
-			out.println("<a href=\"firstservlet\">Back</a>");
+			out.println("<a href=\"ex4GetAndPostServlet\">Back</a>");
 		} else {
 			out.println("<h2>Here are the submitted parameter values</h2>");
 		}
@@ -65,10 +64,10 @@ public class Ex4FormServlet extends HttpServlet {
 			parName = (String) paramNames.nextElement();
 			out.println("<strong>" + parName + "</strong> : " + request.getParameter(parName));
 			out.println("<br />");
-		} // while
+		}
 		out.println("<br/><br/>");
-		out.println("<a href=\"firstservlet\">Back</a>");
+		out.println("<a href=\"ex4GetAndPostServlet\">Back</a>");
 		out.println("<a href=\"index.html\">Home</a>");
 		out.println("</body></html>");
-	}// doPost
+	}
 }

@@ -18,5 +18,9 @@ as an attribute in page scope
 <body>
 <h2>Here is today's date</h2>
 <c:out value="${date}" />
+<br/>
+<br/>
+<a href="index.html">Back</a>
+<a href="index.html">Home</a>
 </body>
 </html>

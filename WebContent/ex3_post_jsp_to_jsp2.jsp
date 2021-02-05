@@ -26,6 +26,6 @@
 
 <br />
 <br />
-<a href="ex4_form.jsp">Back</a>
+<a href="ex3_post_jsp_to_jsp.jsp">Back</a>
 <a href="index.html">Home</a>
 </html>
