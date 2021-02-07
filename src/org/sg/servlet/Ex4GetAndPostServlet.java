@@ -46,6 +46,7 @@ public class Ex4GetAndPostServlet extends HttpServlet {
 		Enumeration paramNames = request.getParameterNames();
 		String parName;
 		String parNameValue;
+		boolean isValid = false;
 		ArrayList<String> arrParameters = new ArrayList<String>();
 		ArrayList<String> arrValues = new ArrayList<String>();
 		while (paramNames.hasMoreElements()) {
@@ -54,18 +55,24 @@ public class Ex4GetAndPostServlet extends HttpServlet {
 			arrParameters.add(parName);
 			arrValues.add(parNameValue);
 		}
+		for (int i = 0; i < arrValues.size(); i++) {
+			if (!arrValues.get(i).equals("")) {
+				isValid = true;
+				break;
+			}
+		}
 		response.setContentType("text/html");
 		java.io.PrintWriter out = response.getWriter();
 		out.println("<html><head>");
 		out.println("<title>Submitted Parameters</title></head><body>");
-		if (arrValues.get(0).equals("") || arrValues.get(1).equals("") || arrValues.get(2).equals("")) {
-			out.println("<h2>Sorry, the request does not contain any parameters</h2>");
-		} else {
+		if (isValid) {
 			out.println("<h2>Here are the submitted parameter values</h2>");
 			for (int i = 0; i < arrParameters.size(); i++) {
 				out.println("<strong>" + arrParameters.get(i) + "</strong> : " + arrValues.get(i));
 				out.println("<br />");
 			}
+		} else {
+			out.println("<h2>Sorry, the request does not contain any parameters</h2>");
 		}
 		out.println("<br/><br/>");
 		out.println("<a href=\"ex4GetAndPostServlet\">Back</a>");
