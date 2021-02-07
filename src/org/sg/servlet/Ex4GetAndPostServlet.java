@@ -44,8 +44,8 @@ public class Ex4GetAndPostServlet extends HttpServlet {
 			throws ServletException, java.io.IOException {
 
 		Enumeration paramNames = request.getParameterNames();
-		String parName = null;
-		String parNameValue = null;
+		String parName;
+		String parNameValue;
 		ArrayList<String> arrParameters = new ArrayList<String>();
 		ArrayList<String> arrValues = new ArrayList<String>();
 		while (paramNames.hasMoreElements()) {
