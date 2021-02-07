@@ -17,12 +17,12 @@
 		<servlet-name>Ex4GetAndPostServlet</servlet-name>
 		<servlet-class>org.sg.servlet.Ex4GetAndPostServlet</servlet-class>
 	</servlet>
-	
+
 	<servlet>
 		<servlet-name>Ex4GetAndPostServletWithArray</servlet-name>
 		<servlet-class>org.sg.servlet.Ex4GetAndPostServletWithArray</servlet-class>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>Ex4ServletGet</servlet-name>
 		<url-pattern>/ex4ServletGet</url-pattern>
@@ -31,7 +31,7 @@
 		<servlet-name>Ex4ServletGet</servlet-name>
 		<servlet-class>org.sg.servlet.Ex4ServletGet</servlet-class>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>Ex4ServletPost</servlet-name>
 		<url-pattern>/ex4ServletPost</url-pattern>
@@ -48,6 +48,15 @@
 	<servlet>
 		<servlet-name>StudentWithJava</servlet-name>
 		<servlet-class>org.sg.servlet.StudentWithJava</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PostHandler</servlet-name>
+		<url-pattern>/postHandler</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PostHandler</servlet-name>
+		<servlet-class>org.sg.servlet.PostHandler</servlet-class>
 	</servlet>
 	
 </web-app>
