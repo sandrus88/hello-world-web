@@ -20,5 +20,9 @@
 			type="text" name="t2" value=""><br> <input type="submit"
 			name="result">
 	</form>
+	<br />
+	<br />
+	<a href="index.html">Back</a>
+	<a href="index.html">Home</a>
 </body>
 </html>

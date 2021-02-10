@@ -24,5 +24,9 @@
 	%>
 	Result is
 	<%=k%>
+	<br />
+	<br />
+	<a href="ex8.jsp">Back</a>
+	<a href="index.html">Home</a>
 </body>
 </html>
