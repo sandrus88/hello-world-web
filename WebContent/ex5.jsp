@@ -9,7 +9,7 @@
 <body>
 <%-- use the 'taglib' directive to make the JSTL 1.0 core tags available; use the uri
 <%-- "http://java.sun.com/jsp/jstl/core" for JSTL 1.1 --%> 
-<%-- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%-- use the 'jsp:useBean' standard action to create the Date object; the object is set
 as an attribute in page scope
 --%>

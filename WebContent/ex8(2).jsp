@@ -10,20 +10,35 @@
 			<%=request.getParameter("a1")%></center>
 	</H1>
 	<%
-	int i = Integer.parseInt(request.getParameter("t1"));
-	int j = Integer.parseInt(request.getParameter("t2"));
+	int i;
+	int j;
 	int k = 0;
 	String str = request.getParameter("a1");
 
-	if (str.equals("add"))
-		k = i + j;
-	if (str.equals("mul"))
-		k = i * j;
-	if (str.equals("div"))
-		k = i / j;
+	try {
+		i = Integer.parseInt(request.getParameter("t1"));
+		j = Integer.parseInt(request.getParameter("t2"));
+		if (str.equals("add")) {
+			k = i + j;
+		}
+		if (str.equals("mul")) {
+			k = i * j;
+		}
+		try {
+			if (str.equals("div")) {
+				k = i / j;
+				j = 0;
+			}
+		} catch (ArithmeticException e) {
+			System.out.println("Non e' possibile dividere per zero");
+		}
+	} catch (NumberFormatException e) {
+		System.out.println("Puoi inserire solo numeri");
+	}
 	%>
 	Result is
 	<%=k%>
+
 	<br />
 	<br />
 	<a href="ex8.jsp">Back</a>

@@ -18,11 +18,6 @@
 		<servlet-class>org.sg.servlet.Ex4GetAndPostServlet</servlet-class>
 	</servlet>
 
-	<servlet>
-		<servlet-name>Ex4GetAndPostServletWithArray</servlet-name>
-		<servlet-class>org.sg.servlet.Ex4GetAndPostServletWithArray</servlet-class>
-	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>Ex4ServletGet</servlet-name>
 		<url-pattern>/ex4ServletGet</url-pattern>
