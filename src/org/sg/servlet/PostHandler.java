@@ -47,7 +47,7 @@ public class PostHandler extends HttpServlet {
 			out.println("<br><br>");
 		}
 		out.println("<br/><br/>");
-		out.println("<a href=\"index.html\">Back</a>");
+		out.println("<a href=\"postHandler.jsp\">Back</a>");
 		out.println("<a href=\"index.html\">Home</a>");
 		out.println("</body>");
 		out.println("</html>");

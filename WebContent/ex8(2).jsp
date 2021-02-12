@@ -4,41 +4,66 @@
 <%@ page import="java.lang.*"%>
 <html>
 <body>
+	<%
+	String x1Str = request.getParameter("x1");
+	String x2Str = request.getParameter("x2");
+	double result = 0;
+	double x1 = -1;
+	double x2 = -1;
+	String opName = request.getParameter("opName");
+	boolean isValid = false;
+	String strResult = null;
+	%>
 	<H1>
 		<center>
 			Result for
-			<%=request.getParameter("a1")%></center>
+			<%=opName%></center>
 	</H1>
 	<%
-	int i;
-	int j;
-	int k = 0;
-	String str = request.getParameter("a1");
-
 	try {
-		i = Integer.parseInt(request.getParameter("t1"));
-		j = Integer.parseInt(request.getParameter("t2"));
-		if (str.equals("add")) {
-			k = i + j;
+		x1 = Double.parseDouble(x1Str);
+		x2 = Double.parseDouble(x2Str);
+		if (opName.equals("add")) {
+			result = x1 + x2;
+			isValid = true;
 		}
-		if (str.equals("mul")) {
-			k = i * j;
+		if (opName.equals("mul")) {
+			result = x1 * x2;
+			isValid = true;
 		}
-		try {
-			if (str.equals("div")) {
-				k = i / j;
-				j = 0;
+		if (opName.equals("div")) {
+			try {
+		result = x1 / x2;
+		if (x2 == 0) {
+			throw new ArithmeticException();
+		} else {
+			isValid = true;
+		}
+			} catch (Exception e) {
+		System.out.println("Non si puo' dividere per zero: " + e);
+		strResult = "Non si puo' dividere per zero";
 			}
-		} catch (ArithmeticException e) {
-			System.out.println("Non e' possibile dividere per zero");
 		}
-	} catch (NumberFormatException e) {
-		System.out.println("Puoi inserire solo numeri");
+	} catch (Exception e) {
+		if (x1Str.equals("") || x2Str.equals("")) {
+			System.out.println("I campi non possono essere vuoti: " + e);
+			strResult = "I campi non possono essere vuoti";
+		} else {
+			System.out.println("Non si possono inserire stringhe: " + e);
+			strResult = "Non si possono inserire stringhe";
+		}
+	}
+	if (isValid) {
+	%>
+	Il risultato e'
+	<%=result%>
+	<%
+	} else {
+	%>
+	<%=strResult%>
+	<%
 	}
 	%>
-	Result is
-	<%=k%>
-
 	<br />
 	<br />
 	<a href="ex8.jsp">Back</a>
