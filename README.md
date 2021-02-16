@@ -1,4 +1,4 @@
 # hello-world-web
 
 # See
-Stesso progetto con versione come progetto maven ( meti il link all'altro progetto)
+* Per vedere lo stesso progetto in versione maven [Clicca qui](../hello-world-web/hello-world-web-maven).
